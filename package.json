@@ -1,6 +1,6 @@
 {
   "name": "neat-send",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Light-weight Promise wrap for raw http.request",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhuqiuyang/neat-send.git"
+    "url": "git+https://github.com/Koa-js/neat-send.git"
   },
   "keywords": [
     "neat",
@@ -19,9 +19,9 @@
   "author": "zhuqiuyang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhuqiuyang/neat-send/issues"
+    "url": "https://github.com/Koa-js/neat-send/issues"
   },
-  "homepage": "https://github.com/zhuqiuyang/neat-send#readme",
+  "homepage": "https://github.com/Koa-js/neat-send#readme",
   "dependencies": {
     "bluebird": "^3.5.0"
   }
