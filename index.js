@@ -11,7 +11,7 @@ module.exports = function send(opts, {
   timeout,
   toJSON,
 }) {
-  const request = opts.protocol === 'https:' ? https : http;
+  const request = (opts.protocol === 'https:' ? https : http).request;
   return new Promise((resolve, reject) => {
     const creq = request(opts);
     creq.on('error', function (err) {
