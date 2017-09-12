@@ -1,6 +1,7 @@
 'use strict';
 
 const http = require('http');
+const https = require('https');
 const Stream = require('stream');
 const Promise = require('bluebird');
 const DEFAULT_TIMEOUT = 15 * 1000;
@@ -10,11 +11,12 @@ module.exports = function send(opts, {
   timeout,
   toJSON,
 }) {
+  const request = opts.protocol === 'https:' ? https : http;
   return new Promise((resolve, reject) => {
-    const creq = http.request(opts);
+    const creq = request(opts);
     creq.on('error', function (err) {
       reject(err)
-    })
+    });
 
     let reqTimeout;
     let abort = false;
@@ -28,7 +30,7 @@ module.exports = function send(opts, {
       }, timeout || DEFAULT_TIMEOUT);
     });
 
-    // 等于在 http.request传入 callback
+    // equal http.request 2nd param: callback
     creq.once('response', cres => {
       if (toJSON) {
         let accum = [];
