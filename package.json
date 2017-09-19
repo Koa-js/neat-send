@@ -1,6 +1,6 @@
 {
   "name": "neat-send",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Light-weight Promise wrap for raw http.request",
   "main": "index.js",
   "scripts": {

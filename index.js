@@ -75,7 +75,8 @@ module.exports = function send(opts, {
     }
     // 自定义请求需要手动 end.
     if (body) {
-      creq.write(body)
+      creq.end(body)
+      return;
     }
     creq.end()
 
