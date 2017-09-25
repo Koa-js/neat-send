@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Koa-js/neat-send#readme",
   "dependencies": {
-    "bluebird": "^3.5.0"
+    "bluebird": "^3.5.0",
+    "neat-rr": "^0.0.1"
   }
 }
